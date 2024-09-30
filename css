@@ -1,0 +1,472 @@
+<!DOCTYPE html>    
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skm@555...</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* General Styling */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color, #f3f3f3);
+      scroll-behavior: smooth;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav {
+      background: var(--nav-bg, #34495e);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--nav-text, white);
+      text-decoration: none;
+      padding: 15px;
+      margin: 5px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      background-color: var(--nav-hover, #2c3e50);
+      border-radius: 5px;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior:smooth;
+    }
+
+    /* Text Animation */
+    .home h1 {
+      font-size: 4rem;
+      animation: fadeIn 2s ease-in-out, moveUp 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes moveUp {
+      from { transform: translateY(20px); }
+      to { transform: translateY(0); }
+    }
+
+    /* Dark and Light Mode */
+    .mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--toggle-bg, #1abc9c);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Home Section */
+    .home {
+      height: 50vh;
+      background-image: url('https://i.ibb.co/PNTSVkM/photo-1544631008-534b4b6c1215.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Login Section */
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 50px auto;
+      background: var(--login-bg, #ffffff);
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .login-container:hover {
+      transform: translateY(-10px);
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--button-bg, #1abc9c);
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: var(--button-hover-bg, #16a085);
+    }
+
+    /* Study Page */
+    .study-page {
+      padding: 40px 20px;
+      background-color: var(--study-bg, #f1c40f);
+      color: var(--study-text, #2c3e50);
+      text-align: center;
+    }
+
+    /* Marketplace Page */
+    .marketplace {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      background-color: var(--marketplace-bg, #ecf0f1);
+    }
+
+    .marketplace-item {
+      background: var(--item-bg, #ffffff);
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .marketplace-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .marketplace-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Dark Mode Variables */
+    .dark-mode {
+      --bg-color: #131313;
+      --nav-bg: #222;
+      --nav-text: #fff;
+      --nav-hover: #333;
+      --login-bg: #222;
+      --button-bg: #2ecc71;
+      --button-hover-bg: #27ae60;
+      --study-bg: #333;
+      --study-text: #f1c40f;
+      --marketplace-bg: #222;
+      --item-bg: #444;
+      --toggle-bg: #e67e22;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle Button -->
+  <button class="mode-toggle" id="mode-toggle">🌙 Dark Mode</button>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#login">Login</a>
+    <a href="#study">Study</a>
+    <a href="#marketplace">Marketplace</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <h1>Welcome to Skm@555... 💲tudy🅿️oint!</h1>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="login-container">
+    <h1>Login</h1>
+    <form action="#">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <a href=""><p>Forget Passward </p></a>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+  
+  
+  
+  
+
+  <!-- Study Page -->
+  <section id="study" class="study-page">
+    <h1>* Study Materials for Engineering students.<h1>
+    
+  <h2>Explore our wide range of study resources.<h2>
+    <ul>
+      <li><a href="#">Math (I) Notes</a></li>
+      
+      <li><a href="#">Physics Notes</a></li>
+      
+      <li><a href="#">Chemistry Notes</a></li>
+      
+      <li><a href="#">PPS Notes</a></li>
+      
+      <li><a href="#">Soft Skill Notes</a></li>
+         
+      <li><a href="#">Ecology Notes</a></li>
+        
+    </ul>
+  </section>
+
+
+
+
+
+
+  <!-- Marketplace Page -->
+  <section id="marketplace" class="marketplace">
+    <div class="marketplace-item">
+      <img src="https://i.ibb.co/YcsfMVX/images.jpg" alt="Book">
+      <h1><p>Buy this book for Rs. 400</p><h1>
+    </div>
+    <div class="marketplace-item">
+      <img src="https://i.ibb.co/G7frrbR/images-1.jpg" alt="Laptop">
+     <h1> <p>Buy this laptop for Rs. 43,000</p><h1>
+    </div>
+    <div class="marketplace-item">
+      <img src="https://i.ibb.co/GPpRS6c/download.jpg" alt="Calculator">
+    <h1>  <p>Buy this calculator for Rs. 700</p><h1>
+    </div>
+  </section>
+
+  <!-- Script for Dark Mode Toggle -->
+  <script>
+    const modeToggle = document.getElementById('mode-toggle');
+    modeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        modeToggle.textContent = '☀️ Light Mode';
+      } else {
+        modeToggle.textContent = '🌙 Dark Mode';
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbox Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* General Styling */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e8f5e9;
+      height: 100%;
+    }
+
+    /* Circular Chat Button */
+    .chat-circle-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #1abc9c;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .chat-circle-btn i {
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Chatbox */
+    .chatbox {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 300px;
+      height: 400px;
+      background: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1001;
+    }
+
+    .chatbox-header {
+      background: #1abc9c;
+      color: white;
+      padding: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chatbox-header span {
+      font-weight: bold;
+    }
+
+    .chatbox-header .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .chatbox-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background: white;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .chatbox-input {
+      display: flex;
+      padding: 10px;
+    }
+
+    .chatbox-input input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .chatbox-input button {
+      padding: 10px 15px;
+      background: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .chatbox-input button:hover {
+      background: #16a085;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Circular Chat Button -->
+  <div class="chat-circle-btn" id="chat-circle-btn">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <!-- Chatbox -->
+  <div class="chatbox" id="chatbox">
+    <div class="chatbox-header">
+      <span>Chat with us!</span>
+      <button class="close-btn" id="close-btn">❌</button>
+    </div>
+    <div class="chatbox-messages" id="chatbox-messages">
+      <!-- Messages will appear here -->
+    </div>
+    <div class="chatbox-input">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button id="send-message">Send</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for chat functionality
+
+    const chatCircleBtn = document.getElementById('chat-circle-btn');
+    const chatbox = document.getElementById('chatbox');
+    const closeBtn = document.getElementById('close-btn');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chatbox-messages');
+    const sendMessageButton = document.getElementById('send-message');
+
+    // Toggle chatbox visibility when the circular button is clicked
+    chatCircleBtn.addEventListener('click', () => {
+      chatbox.style.display = 'flex';  // Show the chatbox
+      chatCircleBtn.style.display = 'none';  // Hide the circular button
+    });
+
+    // Close the chatbox and show the circular button when the ❌ button is clicked
+    closeBtn.addEventListener('click', () => {
+      chatbox.style.display = 'none';  // Hide the chatbox
+      chatCircleBtn.style.display = 'flex';  // Show the circular button
+    });
+
+    // Function to add a message to the chatbox
+    function addMessageToChat(message) {
+      const messageElement = document.createElement('div');
+      messageElement.textContent = message;
+      messageElement.style.padding = '10px';
+      messageElement.style.borderBottom = '1px solid #ccc';
+      messageElement.style.backgroundColor = '#ecf0f1';
+      messageElement.style.borderRadius = '5px';
+      messageElement.style.marginBottom = '5px';
+      chatMessages.appendChild(messageElement);
+      chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
+    }
+
+    // Event listener for the Send button
+    sendMessageButton.addEventListener('click', () => {
+      const message = chatInput.value.trim();
+      if (message !== '') {
+        addMessageToChat(`You: ${message}`);
+        chatInput.value = ''; // Clear input field after sending
+      }
+    });
+
+    // Event listener for the Enter key to send a message
+    chatInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent form submission
+        sendMessageButton.click(); // Simulate button click
+      }
+    });
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
