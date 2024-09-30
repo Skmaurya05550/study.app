@@ -1,14 +1,4 @@
-<!DOCTYPE html>    
-<html lang="en">
-    
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skm@555...</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* General Styling */
-    body, html {
+ {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
@@ -160,7 +150,6 @@
       border-radius: 10px;
     }
 
-    /* Dark Mode Variables */
     .dark-mode {
       --bg-color: #131313;
       --nav-bg: #222;
@@ -175,113 +164,8 @@
       --item-bg: #444;
       --toggle-bg: #e67e22;
     }
-  </style>
-</head>
-
-<body>
-
-  <!-- Dark Mode Toggle Button -->
-  <button class="mode-toggle" id="mode-toggle">🌙 Dark Mode</button>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#login">Login</a>
-    <a href="#study">Study</a>
-    <a href="#marketplace">Marketplace</a>
-  </nav>
-
-  <!-- Home Section -->
-  <section id="home" class="home">
-    <h1>Welcome to Skm@555... 💲tudy🅿️oint!</h1>
-  </section>
-
-  <!-- Login Section -->
-  <section id="login" class="login-container">
-    <h1>Login</h1>
-    <form action="#">
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password" required>
-      <a href=""><p>Forget Passward </p></a>
-      <button type="submit">Login</button>
-    </form>
-  </section>
   
-  
-  
-  
-
-  <!-- Study Page -->
-  <section id="study" class="study-page">
-    <h1>* Study Materials for Engineering students.<h1>
-    
-  <h2>Explore our wide range of study resources.<h2>
-    <ul>
-      <li><a href="#">Math (I) Notes</a></li>
-      
-      <li><a href="#">Physics Notes</a></li>
-      
-      <li><a href="#">Chemistry Notes</a></li>
-      
-      <li><a href="#">PPS Notes</a></li>
-      
-      <li><a href="#">Soft Skill Notes</a></li>
-         
-      <li><a href="#">Ecology Notes</a></li>
-        
-    </ul>
-  </section>
-
-
-
-
-
-
-  <!-- Marketplace Page -->
-  <section id="marketplace" class="marketplace">
-    <div class="marketplace-item">
-      <img src="https://i.ibb.co/YcsfMVX/images.jpg" alt="Book">
-      <h1><p>Buy this book for Rs. 400</p><h1>
-    </div>
-    <div class="marketplace-item">
-      <img src="https://i.ibb.co/G7frrbR/images-1.jpg" alt="Laptop">
-     <h1> <p>Buy this laptop for Rs. 43,000</p><h1>
-    </div>
-    <div class="marketplace-item">
-      <img src="https://i.ibb.co/GPpRS6c/download.jpg" alt="Calculator">
-    <h1>  <p>Buy this calculator for Rs. 700</p><h1>
-    </div>
-  </section>
-
-  <!-- Script for Dark Mode Toggle -->
-  <script>
-    const modeToggle = document.getElementById('mode-toggle');
-    modeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        modeToggle.textContent = '☀️ Light Mode';
-      } else {
-        modeToggle.textContent = '🌙 Dark Mode';
-      }
-    });
-  </script>
-
-</body>
-</html>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatbox Project</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* General Styling */
-    body, html {
+{
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -385,88 +269,5 @@
       background: #16a085;
     }
   </style>
-</head>
-<body>
-
-  <!-- Circular Chat Button -->
-  <div class="chat-circle-btn" id="chat-circle-btn">
-    <i class="fas fa-comments"></i>
-  </div>
-
-  <!-- Chatbox -->
-  <div class="chatbox" id="chatbox">
-    <div class="chatbox-header">
-      <span>Chat with us!</span>
-      <button class="close-btn" id="close-btn">❌</button>
-    </div>
-    <div class="chatbox-messages" id="chatbox-messages">
-      <!-- Messages will appear here -->
-    </div>
-    <div class="chatbox-input">
-      <input type="text" id="chat-input" placeholder="Type a message...">
-      <button id="send-message">Send</button>
-    </div>
-  </div>
-
-  <script>
-    // JavaScript for chat functionality
-
-    const chatCircleBtn = document.getElementById('chat-circle-btn');
-    const chatbox = document.getElementById('chatbox');
-    const closeBtn = document.getElementById('close-btn');
-    const chatInput = document.getElementById('chat-input');
-    const chatMessages = document.getElementById('chatbox-messages');
-    const sendMessageButton = document.getElementById('send-message');
-
-    // Toggle chatbox visibility when the circular button is clicked
-    chatCircleBtn.addEventListener('click', () => {
-      chatbox.style.display = 'flex';  // Show the chatbox
-      chatCircleBtn.style.display = 'none';  // Hide the circular button
-    });
-
-    // Close the chatbox and show the circular button when the ❌ button is clicked
-    closeBtn.addEventListener('click', () => {
-      chatbox.style.display = 'none';  // Hide the chatbox
-      chatCircleBtn.style.display = 'flex';  // Show the circular button
-    });
-
-    // Function to add a message to the chatbox
-    function addMessageToChat(message) {
-      const messageElement = document.createElement('div');
-      messageElement.textContent = message;
-      messageElement.style.padding = '10px';
-      messageElement.style.borderBottom = '1px solid #ccc';
-      messageElement.style.backgroundColor = '#ecf0f1';
-      messageElement.style.borderRadius = '5px';
-      messageElement.style.marginBottom = '5px';
-      chatMessages.appendChild(messageElement);
-      chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
-    }
-
-    // Event listener for the Send button
-    sendMessageButton.addEventListener('click', () => {
-      const message = chatInput.value.trim();
-      if (message !== '') {
-        addMessageToChat(`You: ${message}`);
-        chatInput.value = ''; // Clear input field after sending
-      }
-    });
-
-    // Event listener for the Enter key to send a message
-    chatInput.addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent form submission
-        sendMessageButton.click(); // Simulate button click
-      }
-    });
-
-  </script>
-</body>
-</html>
-
-
-
-
-
 
 
